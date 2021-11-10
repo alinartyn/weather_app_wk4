@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> 🌤 Weather App🌤</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="logic.js"></script>
+    </head>
+    <body onload="bodyDidLoad()" style="background-color: antiquewhite;">
+        <h1 style="text-align:center"></h1>
+        <h1 style= "text-align:center"><b> 🌤 Weather Observations🌪</b></h1>
+        <h2>Record Observations here</h2>
+        <div id= "container" >
+            <div
+            id="dateDIV"
+            class="input">Date: <input 
+                id="dateInput" 
+                type="date"
+                placeholder="DD/MM/YYYY"/> </div>
+            <div
+            id="mintempDIV" 
+            class="input">Minimum temperature (℃): <input
+                id="mintempInput"
+                type="number"
+                placeholder="Enter Temperature"/> </div> 
+            <div
+            id="maxtempDIV"
+            class="input">Maximum temperature (℃): <input
+                id="maxtempInput" 
+                type="number"
+                placeholder="Enter Temperature"/> </div>
+            <div
+            id="conditionDIV"
+            class="input">Condition: <input
+                id="conditionInput"
+                type="text"
+                placeholder="Enter Condition" /> </div>
+        
+        <button id = "enterButton" onclick = "userEntersObservation()">Enter</button>        
+        <button id = "downloadFileButton" onclick = "userDownloadsObservation()">Download</button>
+        <input id = "fileUploader" type = "file" hidden = "hidden"/>
+        <button id = "uploadFileButton" onclick = "bodyDidLoad()">Upload</button> 
+
+        <table id="displayLogTable">
+            <thead id = "headLogTable">
+                <tr>
+                    <th>Date </th>
+                    <th>Minimum Temperature (deg. C)</th>
+                    <th>Maximum Temperature (deg. C)</th>
+                    <th>Conditions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyLogTable"></tbody>
+        </table>  
+        </div>
+    </body>
+    <script src = "node_modules/jquery/dist/jquery.min.js"></script>
+    <script src = "logic.js"></script>
+</html>
